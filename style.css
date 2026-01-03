@@ -84,6 +84,14 @@ html {
 
 .recipe__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: auto-fit;
     padding-top: 5rem;
+}
+
+.recipe__container-card h2 {
+    font-size: 3rem;
+    font-family: var(--primary-font);
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
