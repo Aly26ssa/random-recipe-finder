@@ -11,7 +11,7 @@
 
 html {
     font-size: 62.5%;
-    
+    padding-bottom: 5rem;
 }
 
 .recipe__finder {
@@ -19,10 +19,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-}
-
-.recipe__finder-title {
+    padding-top: 12rem;
     
 }
 
@@ -43,6 +40,7 @@ html {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .recipe__search-box {
@@ -74,14 +72,14 @@ html {
 .recipe__random {
     display: flex;
     justify-content: center;
-    
+    padding-top: 1rem;
 }
 
 .recipe__random-btn {
     font-family: var(--secondary-font);
     background-color: pink;
-    padding: 1rem;
-    font-size: 1.5rem;
+    padding: 1.75rem;
+    font-size: 1.75rem;
     border-radius: 8px;
     border: none;
 }
@@ -97,7 +95,12 @@ html {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 4rem;
     
+}
+
+.recipe__container-card {
+    transition: all 0.5s ease-in-out;
 }
 
 .recipe__container-card h2 {
@@ -112,11 +115,24 @@ html {
     width: 100%;
 }
 
+.recipe__container-card img:hover {
+    cursor: pointer;
+    transform: translateY(3px);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 15%);
+}
+
 .recipe__random-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+.recipe__random-card img:hover {
+    cursor: pointer;
+    transform: translateY(3px);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 15%);
 }
 
 .recipe__random-card h2 {
