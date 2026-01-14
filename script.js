@@ -127,21 +127,10 @@ function exitContainer() {
     document.body.style.overflow = "";
 }
 
-// 
-recipeContainer.addEventListener('click', (e) => {
-    e.preventDefault();
-    const card = e.target.closest('.recipe__container-card');
-
-    if (card) {
-        const recipeId = card.dataset.id;
-        getRecipeDetails(recipeId);
-    }
-});
 
 // Fetching recipe ingredients 
 async function getRecipeDetails(id) {
     try {
-        ingredientsList.innerHTML = `<p class="message loading">Loading details...</p>`;
         showContainer();
 
         if (messageContainer) {
@@ -154,7 +143,31 @@ async function getRecipeDetails(id) {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         if (data.meals) {
-            console.log(data.meals[0]);
+            const meal = data.meals[0];
+            
+            // List ingredients and measurements
+            let ingredientsListHtml = '';
+            for (let i = 1; i <= 20; i++) {
+                const ingredient = meal[`strIngredient${i}`];
+                const measurement = meal[`strMeasure${i}`];
+                if (ingredient) {
+                    ingredientsListHtml += `<li>${measurement} ${ingredient}</li>`;
+                }
+            }
+            
+            // Populate the recipe details
+            ingredientsDetails.innerHTML = `
+                <h2>${meal.strMeal}</h2>
+                <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                <h3>Category: ${meal.strCategory}</h3>
+                <h3>Cuisine: ${meal.strArea}</h3>
+                <h3>Ingredients:</h3>
+                <ul>
+                    ${ingredientsListHtml}
+                </ul>
+                <h3>Instructions:</h3>
+                <p>${meal.strInstructions}</p>
+            `;
         } else {
             if (messageContainer) {
                 messageContainer.textContent = 'Details not found.';
@@ -166,7 +179,7 @@ async function getRecipeDetails(id) {
     } catch (error) {
         console.error('Error fetching recipe details:', error);
         if (messageContainer) {
-            messageContainer.textContent = 'Error loading details. Please try again.';
+            messageContainer.textContent = 'Error loading details, please try again.';
             messageContainer.classList.remove('hidden');
             messageContainer.classList.add('error');
             messageContainer.setAttribute('role', 'alert');
@@ -174,6 +187,18 @@ async function getRecipeDetails(id) {
     }
 }
 
-// ingredientsExitButton.addEventListener('click', );
+// Enabling Recipe Details pop up
+recipeContainer.addEventListener('click', (e) => {
+    e.preventDefault();
+    const card = e.target.closest('.recipe__container-card, .recipe__random-card');
+
+    if (card) {
+        const recipeId = card.dataset.id;
+        getRecipeDetails(recipeId);
+    }
+});
+
+// Close ingredients button functionality
+ingredientsExitButton.addEventListener('click', exitContainer);
 
 
