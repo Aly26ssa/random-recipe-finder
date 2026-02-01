@@ -26,7 +26,7 @@ To run this project locally on your machine, follow these steps:
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/Aly26ssa/random-recipe.git](https://github.com/Aly26ssa/random-recipe.git)
+    git clone https://aly26ssa.github.io/random-recipe-finder/
     ```
 
 2.  **Navigate to the project directory**
@@ -37,13 +37,16 @@ To run this project locally on your machine, follow these steps:
 3.  **Launch the application**
     * Since this project uses ES6 Modules (`<script type="module" ...>`), you need to run it via a local server to avoid CORS errors.
     * **VS Code Users:** Install the "Live Server" extension, right-click `index.html`, and select "Open with Live Server".
-    * **Python Users:** Run `python -m http.server 8000` in the terminal and open `localhost:8000`.
 
 ## 📂 Project Structure
 
 ```text
 random-recipe/
-├── index.html      # Main HTML structure
-├── style.css       # CSS styling and layout
-├── script.js       # Logic for fetching API data
-└── README.md       # Project documentation
+├── index.html          # Main HTML structure
+├── style.css           # CSS styling and layout
+├── script.js           # Logic for fetching API data
+├── classNames.js       # Exports for classname variables
+├── exitContainer.js    # Exit button and container functions
+├── ingredients.js      # Functionality of recipe ingredients
+├── randomRecipes.js    # Random recipe button functions and API data
+└── README.md           # Project documentation
