@@ -50,3 +50,7 @@ random-recipe/
 ├── ingredients.js      # Functionality of recipe ingredients
 ├── randomRecipes.js    # Random recipe button functions and API data
 └── README.md           # Project documentation
+```
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
