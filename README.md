@@ -1,6 +1,6 @@
 # 🍳 Random Recipe Finder
 
-A simple and responsive web application that allows users to search for delicious recipes. This project fetches data from [TheMealDB API](https://www.themealdb.com) to display meal suggestions including names and thumbnail images.
+A responsive web application that allows users to search for delicious recipes. This project fetches data from [TheMealDB API](https://www.themealdb.com) to display meal suggestions including names and thumbnail images.
 
 ## 📸 Screenshot
 
