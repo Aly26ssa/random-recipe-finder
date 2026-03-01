@@ -9,8 +9,8 @@ body {
 }
 
 :root {
-    --primary-font: 'Arial', sans-serif;
-    --secondary-font: 'Times New Roman', serif;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Poppins', serif;
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
@@ -46,6 +46,7 @@ html {
 
 .recipe__title-name {
     font-family: var(--primary-font);
+    text-transform: uppercase;
     font-size: 7rem;
     color: white;
     font-weight: 800;
@@ -263,6 +264,7 @@ html {
     justify-content: center;
     font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     font-family: var(--primary-font);
+    text-transform: uppercase;
     text-align: center;
     padding: 2rem 1.5rem;
     color: white;
@@ -326,7 +328,7 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     overflow: hidden;
-    padding: 25px 30px;
+    padding: 65px 75px;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -339,21 +341,20 @@ html {
 
 .ingredients__exit-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 2rem;
-    color: red;
-    background-color: lightgray;
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 7px;
 }
 
 
 .ingredients__exit-btn:hover {
-    color: black;
-    background-color: white;
+    color: red;
+    background-color: #efefef;
     cursor: pointer;
 }
 
@@ -364,27 +365,34 @@ html {
     overflow-x: hidden;
     scrollbar-gutter: stable;
     flex: 1;
+    padding-right: 25px;
 }
 
 .ingredients__details h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 20px;
     color: black;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
 }
 
 .ingredients__details img {
-    width: 50%;
+    width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
 
 .ingredients__details h3 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 500;
     margin-top: 25px;
     margin-bottom: 10px;
-    border-bottom: 2px solid black;
+    border-bottom: 1.5px solid #d7d4d4;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
 }
 
 .ingredients__details ul {
@@ -396,7 +404,8 @@ html {
 .ingredients__details ul li {
     padding: 8px 0;
     border-bottom: 1px dashed lightgray;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
 }
 
 .ingredients__details ul li:last-child {
@@ -405,7 +414,8 @@ html {
 
 .ingredients__details p {
     line-height: 1.8;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
 }
 
 .ingredients__details a {
