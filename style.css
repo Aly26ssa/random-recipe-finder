@@ -322,7 +322,7 @@ html {
 .ingredients__list {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #6b65c3;
     max-width: 900px;
     max-height: 75vh;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -372,7 +372,7 @@ html {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: black;
+    color: white;
     font-family: var(--secondary-font);
     text-transform: uppercase;
 }
@@ -393,6 +393,7 @@ html {
     border-bottom: 1.5px solid #d7d4d4;
     font-family: var(--secondary-font);
     text-transform: uppercase;
+    color: white;
 }
 
 .ingredients__details ul {
@@ -406,6 +407,7 @@ html {
     border-bottom: 1px dashed lightgray;
     font-size: 2rem;
     font-family: var(--secondary-font);
+    color: white;
 }
 
 .ingredients__details ul li:last-child {
@@ -416,6 +418,7 @@ html {
     line-height: 1.8;
     font-size: 2rem;
     font-family: var(--secondary-font);
+    color: white;
 }
 
 .ingredients__details a {
