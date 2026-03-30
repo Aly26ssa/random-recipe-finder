@@ -1,0 +1,1 @@
+import { getRecipeDetails } from "./ingredients";
