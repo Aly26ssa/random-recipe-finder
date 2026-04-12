@@ -333,29 +333,14 @@ html {
     transition: transform 0.3s ease;
 }
 
+@media (max-width: 750px) {
+    .ingredients__list {
+        padding: 45px;
+    }
+}
+
 .ingredients__container.hidden .ingredients__list {
     transform: scale(0.95);
-}
-
-/* Exit Button */
-
-.ingredients__exit-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: black;
-    background-color: white;
-    border: 1.5px solid black;
-    border-radius: 10px;
-    padding: 7px;
-}
-
-
-.ingredients__exit-btn:hover {
-    color: red;
-    background-color: #efefef;
-    cursor: pointer;
 }
 
 /* Ingredient Details Section */
@@ -377,6 +362,12 @@ html {
     text-transform: uppercase;
 }
 
+@media (max-width: 600px) {
+    .ingredients__details h2 {
+        font-size: 2rem;
+    }
+}
+
 .ingredients__details img {
     width: 100%;
     border-radius: 8px;
@@ -396,6 +387,12 @@ html {
     color: white;
 }
 
+@media (max-width: 600px) {
+    .ingredients__details h3 {
+        font-size: 2rem;
+    }
+}
+
 .ingredients__details ul {
     list-style: none;
     padding: 0;
@@ -410,6 +407,12 @@ html {
     color: white;
 }
 
+@media (max-width: 600px) {
+    .ingredients__details ul li {
+        font-size: 1.5rem;
+    }
+}
+
 .ingredients__details ul li:last-child {
     border-bottom: none;
 }
@@ -421,6 +424,12 @@ html {
     color: white;
 }
 
+@media (max-width: 600px) {
+    .ingredients__details p {
+        font-size: 1.5rem;
+    }
+}
+
 .ingredients__details a {
     color: black;
     text-decoration: none;
@@ -430,4 +439,25 @@ html {
 .ingredients__details a:hover {
     color: green;
     text-decoration: underline;
+}
+
+/* Exit Button */
+
+.ingredients__exit-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+
+.ingredients__exit-btn:hover {
+    color: red;
+    background-color: #efefef;
+    cursor: pointer;
 }
